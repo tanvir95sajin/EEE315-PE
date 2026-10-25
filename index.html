@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Electronics – interactive circuits</title>
+<meta name="description" content="Interactive simulations of the circuits in the Power Electronics lecture note: change any parameter and see the waveshapes and results.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><strong>Power Electronics</strong> <span>interactive circuits</span></div>
+  <div class="hbtn"><button id="theme" title="Light / dark">&#9788;&#9790;</button></div>
+</header>
+<div class="layout">
+  <aside>
+    <input id="q" type="search" placeholder="Search circuits (e.g. buck, bridge, PWM)" aria-label="Search circuits">
+    <nav id="nav" aria-label="Circuits"></nav>
+    <p class="foot">Every figure of the note that has a live version opens directly with <code>#figure-id</code>.</p>
+  </aside>
+  <main>
+    <h1 id="title"></h1>
+    <p class="pages" id="pages"></p>
+    <p class="desc" id="desc"></p>
+    <section class="panel">
+      <div class="phead"><h2>Parameters</h2>
+        <div class="btns"><button id="reset">Reset to defaults</button><button id="share">Copy link</button><button id="csv">CSV</button><button id="svg">SVG</button></div></div>
+      <div id="params" class="params"></div>
+    </section>
+    <div id="err" class="err" role="alert"></div>
+    <section class="panel plotp"><div id="plot" class="plot"></div><p class="hint">Move the pointer over the plot to read the values of every trace at that instant. Dashed line inside a strip = average value.</p></section>
+    <section class="panel"><div id="bars" class="plot"></div></section>
+    <section class="panel"><h2>Results</h2><div id="readouts"></div><div id="notes"></div>
+      <p class="hint">The right-hand column evaluates the closed-form expression from the note for the present parameters (where one exists) and compares it with the numerical simulation.</p></section>
+  </main>
+</div>
+<script src="js/util.js"></script>
+<script src="js/plot.js"></script>
+<script src="js/engines.js"></script>
+<script src="js/modelkit.js"></script>
+<script src="js/models-switch.js"></script>
+<script src="js/models-acac.js"></script>
+<script src="js/models-inv.js"></script>
+<script src="js/models-rect.js"></script>
+<script src="js/models-dcdc.js"></script>
+<script src="js/aliases.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

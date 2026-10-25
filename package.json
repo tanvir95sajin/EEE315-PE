@@ -1,0 +1,15 @@
+{
+  "name": "pe-interactive",
+  "version": "1.0.0",
+  "description": "Interactive simulations of the Power Electronics lecture note (static site, no build step)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/run.mjs && node tests/dom.mjs",
+    "test:numeric": "node tests/run.mjs",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}
